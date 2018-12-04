@@ -1,0 +1,144 @@
+﻿@model AnnConn.Models.Collaborators
+
+@{
+    ViewData["Title"] = "Collabor";
+}
+
+<h2>Collabor</h2>
+
+<div>
+    <h4>Collaborators</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt>
+            Họ & tên
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fullName)
+        </dd>
+        <dt>
+            Password
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt>
+            TT hiển thị
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.office)
+        </dd>
+        <dt>
+            Thời gian gia nhập
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.joinDate)
+        </dd>
+        <dt>
+            Giới tính
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.gender)
+        </dd>
+        <dt>
+           Ngày sinh
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.birthday)
+        </dd>
+        <dt>
+            CMND/TCC/HC
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cmnd)
+        </dd>
+        <dt>
+            Nơi cấp
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.place)
+        </dd>
+        <dt>
+            Ngày cấp
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.day)
+        </dd>
+        <dt>
+            Tên CTy
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.office_name)
+        </dd>
+        <dt>
+           Lĩnh vực
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.field)
+        </dd>
+        <dt>
+           Vị trí
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+        <dt>
+            Số nhà
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.house)
+        </dd>
+        <dt>
+           Quốc gia
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nation)
+        </dd>
+        <dt>
+            Thành phố
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+        <dt>
+            Quận/Huyện
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.district)
+        </dd>
+        <dt>
+            Phường/Xã
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.town)
+        </dd>
+        <dt>
+            Mã bưu điện
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.zip)
+        </dd>
+        <dt>
+            SĐT
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+        <dt>
+            Chính sách
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.policy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Collabor_Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Collaborators">Back to List</a>
+</div>

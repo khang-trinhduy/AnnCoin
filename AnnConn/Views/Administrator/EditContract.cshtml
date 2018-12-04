@@ -1,0 +1,176 @@
+﻿@model AnnConn.Models.Contracts
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h4>Sửa hợp đồng</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                User CTV
+                <input asp-for="collabor" class="form-control" />
+                <span asp-validation-for="collabor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Ngày cung cấp
+                <input asp-for="pDate" class="form-control" />
+                <span asp-validation-for="pDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Tên Khách hàng
+                <input asp-for="customer" class="form-control" />
+                <span asp-validation-for="customer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Số điện thoại KH
+                <input asp-for="phone" class="form-control" />
+                <span asp-validation-for="phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Email
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Ghi chú khác
+                <input asp-for="note" class="form-control" />
+                <span asp-validation-for="note" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Chính sách phí
+                áp dụng cho CTV
+                <input asp-for="note" class="form-control" />
+                <span asp-validation-for="note" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Hiện trạng KH
+                <input asp-for="condition" class="form-control" />
+                <span asp-validation-for="condition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L1.Sales 1
+                <input asp-for="s1" class="form-control" />
+                <span asp-validation-for="s1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L1.NgàyBĐầu
+                <input asp-for="d1" class="form-control" />
+                <span asp-validation-for="d1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L1. Thời hạn giữ tối đa  (ngày)
+                <input asp-for="f1" class="form-control" />
+                <span asp-validation-for="f1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L1. Lý do gia hạn (nếu có)
+                <input asp-for="day1" class="form-control" />
+                <span asp-validation-for="day1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                L1. Lý do gia hạn (nếu có)
+                <input asp-for="r1" class="form-control" />
+                <span asp-validation-for="r1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L1. DEADLINE 1
+                <input asp-for="dl1" class="form-control" />
+                <span asp-validation-for="dl1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L1. Trạng thái
+                <input asp-for="c1" class="form-control" />
+                <span asp-validation-for="c1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Sales 2
+                <input asp-for="s2" class="form-control" />
+                <span asp-validation-for="s2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L2. Ngày bđầu
+                <input asp-for="d2" class="form-control" />
+                <span asp-validation-for="d2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L2. Phí tính sales 2
+                <input asp-for="f2" class="form-control" />
+                <span asp-validation-for="f2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L2. Thời hạn giữ tối đa (ngày)
+                <input asp-for="day2" class="form-control" />
+                <span asp-validation-for="day2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L2. Lý do gia hạn (nếu có)
+                <input asp-for="r2" class="form-control" />
+                <span asp-validation-for="r2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L2. DEADLINE
+                <input asp-for="dl2" class="form-control" />
+                <span asp-validation-for="dl2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L2. Trạng thái
+                <input asp-for="c2" class="form-control" />
+                <span asp-validation-for="c2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Sales 3
+                <input asp-for="s3" class="form-control" />
+                <span asp-validation-for="s3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L3. Ngày bđầu
+                <input asp-for="d3" class="form-control" />
+                <span asp-validation-for="d3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Phí tính cho sales 3
+                <input asp-for="f3" class="form-control" />
+                <span asp-validation-for="f3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L3. Thời hạn giữ tối đa (ngày)
+                <input asp-for="day3" class="form-control" />
+                <span asp-validation-for="day3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L3. Lý do gia hạn (nếu có)
+                <input asp-for="r3" class="form-control" />
+                <span asp-validation-for="r3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L3. DEADLINE
+                <input asp-for="dl3" class="form-control" />
+                <span asp-validation-for="dl3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                L3. Trạng thái
+                <input asp-for="c3" class="form-control" />
+                <span asp-validation-for="c3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Mã giới thiệu
+                <input asp-for="code" class="form-control" />
+                <span asp-validation-for="code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" value="Save">Lưu lại</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a id="home" asp-action="Contract">Back</a>
+</div>
+

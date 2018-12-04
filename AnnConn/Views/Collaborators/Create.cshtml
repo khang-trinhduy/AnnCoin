@@ -1,0 +1,199 @@
+﻿@model AnnConn.Models.PartnerModal
+
+@{
+    ViewData["Title"] = "Thông tin khách hàng";
+    //TempData["admin"] = "duyen.dang@bankexpress.vn";
+}
+
+<h2>Thông tin khách hàng</h2>
+
+@*<h4>Tạo mới</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label id="req" class="control-label">Tên khách hàng</label>
+                <input asp-for="@Model.customer.name" class="form-control" />
+                <span asp-validation-for="@Model.customer.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="req" class="control-label">Số điện thoại</label>
+                <input asp-for="@Model.customer.phone" class="form-control" />
+                <span asp-validation-for="@Model.customer.phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.customer.email" class="control-label"></label>
+                <input asp-for="@Model.customer.email" class="form-control" />
+                <span asp-validation-for="@Model.customer.email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label style="text-decoration:underline">Hãy cho chúng tôi biết trạng thái KH của bạn hiện tại?</label>
+                @*<label asp-for="@Model.customer.q4" class="control-label"></label>*@
+                <div class="form-group">
+                    @*<label asp-for="@Model.customer.q4a" class="control-label"></label>*@
+                    @*<select asp-for="@Model.customer.q4a" class="radio">
+            <option value="Chỉ tìm hiểu, chưa có thái độ rõ ràng"> Chỉ tìm hiểu, chưa có thái độ rõ ràng</option>
+            <option value="Quan tâm"> Quan tâm</option>
+            <option value="Đã xác định được mục đích mua"> Đã xác định được mục đích mua</option>
+        </select>*@
+                    <span class="basic">
+                        @Html.RadioButtonFor(m => m.customer.q4a, "Chỉ tìm hiểu, chưa có thái độ rõ ràng", new { style = "margin-left: 45px;" }) Chỉ tìm hiểu, chưa có thái độ rõ ràng
+                    </span>
+                    <span style="display:block"></span>
+                    <span class="advance">
+                        @Html.RadioButtonFor(m => m.customer.q4a, "Quan tâm", new { style = "margin-left: 45px;" }) Quan tâm
+                    </span>
+                    <span style="display:block"></span>
+                    <span class="advance">
+                        @Html.RadioButtonFor(m => m.customer.q4a, "Đã xác định được mục đích mua", new { style = "margin-left: 45px;" }) Đã xác định được mục đích mua
+                     </span>
+                        <span asp-validation-for="@Model.customer.q4a" class="text-danger"></span>
+                </div>
+                @*<span asp-validation-for="@Model.customer.q4a" class="text-danger"></span>*@
+            </div>
+            @*<span style="width:50px"></span>
+        <hr />
+        <h4 style="font-family:Calibri; text-decoration:underline">
+            Mô tả cho chúng tôi biết thêm về sự quan tâm của Khách hàng. Điều này sẽ giúp sales chăm sóc khách hàng của bạn nhanh và hiệu quả hơn.
+            Việc chưa cung cấp thêm những được thông tin sau cho thấy KH bạn cung cấp chỉ dừng ở mức tìm hiểu về dự án
+        </h4>
+        <span style="width:150px"></span>
+        <span style="width:50px"></span>*@
+            <div class="optional">
+                <div class="form-group">
+                    <label style="text-decoration:underline">Khách hàng thuộc nhóm?</label>
+                    <p>(Có thể chọn nhiều đáp án)</p>
+                    @*<label style="font-weight:bold">(Có thể chọn nhiều đáp án) </label>*@
+                    <ol style="list-style:none">
+                        <li>@Html.CheckBoxFor(m => m.customer.q5a, new { style = "margin-left: 5px; margin-right: 5px" }) Khách hàng mua để ở</li>
+                        <li> @Html.CheckBoxFor(m => m.customer.q5b, new { style = "margin-left: 5px; margin-right: 5px" }) Khách hàng mua đầu tư</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q5c, new { style = "margin-left: 5px; margin-right: 5px" }) Khách hàng mua cho thuê</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q5d, new { style = "margin-left: 5px; margin-right: 5px" }) Chưa xác định</li>
+                    </ol>
+                </div>
+                <div class="form-group">
+                    <label style="text-decoration:underline">Khách hàng đã xác định sản phẩm mình cần mua?</label>
+                    <p>(Có thể chọn nhiều đáp án) </p>
+                    <ol style="list-style:none">
+                        <li>@Html.CheckBoxFor(m => m.customer.q6a, new { style = "margin-left: 5px; margin-right: 5px" }) Căn hộ</li>
+                        @*<li> @Html.CheckBoxFor(m => m.customer.q6b, new { style = "margin-left: 5px; margin-right: 5px" }) Căn hộ 1 PN</li>
+                <li>@Html.CheckBoxFor(m => m.customer.q6c, new { style = "margin-left: 5px; margin-right: 5px" }) Căn hộ 2 PN</li>
+                <li> @Html.CheckBoxFor(m => m.customer.q6d, new { style = "margin-left: 5px; margin-right: 5px" }) Căn hộ 3 PN</li>*@
+                        <li> @Html.CheckBoxFor(m => m.customer.q6b, new { style = "margin-left: 5px; margin-right: 5px" }) Khác</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q6c, new { style = "margin-left: 5px; margin-right: 5px" }) Chưa xác định</li>
+                        @*<li> @Html.CheckBoxFor(m => m.customer.q6g, new { style = "margin-left: 5px; margin-right: 5px" })Khả năng, mức giá có thể cho thuê sau khi mua</li>
+                <li>@Html.CheckBoxFor(m => m.customer.q6h, new { style = "margin-left: 5px; margin-right: 5px" })Pháp lý dự án</li>
+                <li> @Html.CheckBoxFor(m => m.customer.q6i, new { style = "margin-left: 5px; margin-right: 5px" })Uy tín của sàn, chứng nhận sàn là phân phối chính thức của Vincity</li>
+                <li>@Html.CheckBoxFor(m => m.customer.q6j, new { style = "margin-left: 5px; margin-right: 5px" }) Hướng, View, Diện tích, thiết kế căn hộ</li>
+                <li> @Html.CheckBoxFor(m => m.customer.q6k, new { style = "margin-left: 5px; margin-right: 5px" })Quy trình, thủ tục giữ chỗ, đặt cọc và mua căn hộ</li>
+                <li> @Html.CheckBoxFor(m => m.customer.q6l, new { style = "margin-left: 5px; margin-right: 5px" }) Phương án mua căn hộ tối ưu</li>
+                <li>@Html.CheckBoxFor(m => m.customer.q6m, new { style = "margin-left: 5px; margin-right: 5px" }) Khác</li>*@
+                    </ol>
+                </div>
+
+                <div class="form-group">
+                    <label style="text-decoration:underline">Bạn nghĩ điều gì đang khiến khách hàng phân vân?</label>
+                    <p>(Có thể chọn nhiều đáp án) </p>
+                    <ol style="list-style:none">
+                        <li>@Html.CheckBoxFor(m => m.customer.q7a, new { style = "margin-left: 5px; margin-right: 5px" }) Không rõ</li>
+                        <li> @Html.CheckBoxFor(m => m.customer.q7b, new { style = "margin-left: 5px; margin-right: 5px" }) Giá căn hộ</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7c, new { style = "margin-left: 5px; margin-right: 5px" }) Vị trí dự án</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7d, new { style = "margin-left: 5px; margin-right: 5px" }) Việc vay vốn khi mua</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7e, new { style = "margin-left: 5px; margin-right: 5px" }) Khả năng sinh lời của căn hộ</li>
+                        <li> @Html.CheckBoxFor(m => m.customer.q7f, new { style = "margin-left: 5px; margin-right: 5px" }) Khả năng chuyển nhượng trước khi bàn giao</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7g, new { style = "margin-left: 5px; margin-right: 5px" })  Khả năng cho thuê</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7h, new { style = "margin-left: 5px; margin-right: 5px" })  Pháp lý dự án</li>
+                        <li> @Html.CheckBoxFor(m => m.customer.q7i, new { style = "margin-left: 5px; margin-right: 5px" }) Uy tín của sàn</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7j, new { style = "margin-left: 5px; margin-right: 5px" })  Hướng, View, Diện tích, thiết kế căn hộ</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7k, new { style = "margin-left: 5px; margin-right: 5px" }) Quy trình, thủ tục giữ chỗ, đặt cọc và mua căn hộ</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7l, new { style = "margin-left: 5px; margin-right: 5px" })  Phương án mua căn hộ tối ưu</li>
+                        <li>@Html.CheckBoxFor(m => m.customer.q7m, new { style = "margin-left: 5px; margin-right: 5px" }) Khác</li>
+                    </ol>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label class="control-label" style="text-decoration:underline">Những điểm lưu ý khi tiếp cận khách hàng</label>
+                <p>(Đây là những thông tin quan trọng giúp Sales chăm sóc khách hàng tốt hơn</p>
+                <input asp-for="@Model.customer.note" placeholder="Khách hàng làm trong lĩnh vực? Cần nhắc tên người giới thiệu?..." class="form-control" />
+                <span asp-validation-for="@Model.customer.note" class="text-danger"></span>
+            </div>
+            <label style="text-decoration:underline">Đề xuất Sale chăm sóc</label>
+            <p>(Nếu không, Annhome sẽ chủ động sắp xếp nhân sự phù hợp)</p>
+            <select asp-for="@Model.customer.supporter" asp-items="@Model.sales">
+                <option>Công ty sắp xếp</option>
+            </select>
+            @*<div class="form-group">
+            <label class="control-label">Thông tin thêm</label>
+            <input asp-for="@Model.customer.note" class="form-control" />
+            <span asp-validation-for="@Model.customer.note" class="text-danger"></span>
+        </div>*@
+            @*<div class="form-group">
+            <label asp-for="condition" class="control-label"></label>
+            <input asp-for="condition" class="form-control" />
+            <span asp-validation-for="condition" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="cNumber" class="control-label"></label>
+            <input asp-for="cNumber" class="form-control" />
+            <span asp-validation-for="cNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="pNumber" class="control-label"></label>
+            <input asp-for="pNumber" class="form-control" />
+            <span asp-validation-for="pNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ch" class="control-label"></label>
+            <input asp-for="ch" class="form-control" />
+            <span asp-validation-for="ch" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="price" class="control-label"></label>
+            <input asp-for="price" class="form-control" />
+            <span asp-validation-for="price" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="policy" class="control-label"></label>
+            <input asp-for="policy" class="form-control" />
+            <span asp-validation-for="policy" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="charges" class="control-label"></label>
+            <input asp-for="charges" class="form-control" />
+            <span asp-validation-for="charges" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="totals" class="control-label"></label>
+            <input asp-for="totals" class="form-control" />
+            <span asp-validation-for="totals" class="text-danger"></span>
+        </div>*@
+            <span style="display:block; height:10px"></span>
+            <div class="form-group">
+                <button type="submit">Xác nhận</button>
+            </div>
+            @*<a href="#" class="btn">Submit <span class="arrow">❯</span></a>*@
+        </form>
+    </div>
+</div>
+
+<style>
+    #req{
+        color:#f12121;
+    }
+</style>
+<script>
+    $(document).ready(function () { $('.optional').hide() });
+    $('.advance').on('click', function () {
+        $('.optional').show(500);
+    });
+    $('.basic').on('click', function () {
+            $('.optional').hide(500);
+});
+</script>
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+

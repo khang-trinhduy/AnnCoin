@@ -1,0 +1,131 @@
+﻿@model AnnConn.Models.Collaborators
+
+@{
+    ViewData["Title"] = "Collabor_Edit";
+}
+
+<h2>Collabor_Edit</h2>
+
+<h4>Collaborators</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Collabor_Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                Email
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Họ và tên
+                <input asp-for="fullName" class="form-control" />
+                <span asp-validation-for="fullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                TT hiển thị
+                <input asp-for="office" class="form-control" />
+                <span asp-validation-for="office" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                TG tham gia
+                <input asp-for="joinDate" class="form-control" />
+                <span asp-validation-for="joinDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Giới tính
+                <input asp-for="gender" class="form-control" />
+                <span asp-validation-for="gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Ngày sinh
+                <input asp-for="birthday" class="form-control" />
+                <span asp-validation-for="birthday" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               CMND/TCC/HC
+                <input asp-for="cmnd" class="form-control" />
+                <span asp-validation-for="cmnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Nơi cấp
+                <input asp-for="place" class="form-control" />
+                <span asp-validation-for="place" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Ngày cấp
+                <input asp-for="day" class="form-control" />
+                <span asp-validation-for="day" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Tên CTy
+                <input asp-for="office_name" class="form-control" />
+                <span asp-validation-for="office_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Lĩnh vực
+                <input asp-for="field" class="form-control" />
+                <span asp-validation-for="field" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Vị trí
+                <input asp-for="position" class="form-control" />
+                <span asp-validation-for="position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Số nhà
+                <input asp-for="house" class="form-control" />
+                <span asp-validation-for="house" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Quốc gia
+                <input asp-for="nation" class="form-control" />
+                <span asp-validation-for="nation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Thành phố
+                <input asp-for="city" class="form-control" />
+                <span asp-validation-for="city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Quận/Huyện
+                <input asp-for="district" class="form-control" />
+                <span asp-validation-for="district" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Phường/Xã
+                <input asp-for="town" class="form-control" />
+                <span asp-validation-for="town" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Mã bưu điện
+                <input asp-for="zip" class="form-control" />
+                <span asp-validation-for="zip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                SĐT
+                <input asp-for="phone" class="form-control" />
+                <span asp-validation-for="phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Chính sách
+                <input asp-for="policy" class="form-control" />
+                <span asp-validation-for="policy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Collaborators">Back to List</a>
+</div>
+

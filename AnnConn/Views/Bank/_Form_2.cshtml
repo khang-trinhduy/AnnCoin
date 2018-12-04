@@ -1,0 +1,405 @@
+﻿<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+@{
+    ViewData["Title"] = "Form_2";
+}
+
+<ul class="nav nav-tabs" id="myForm">
+    <li class="active"><a href="#general">THÔNG TIN CHUNG</a></li>
+    <li><a href="#user">THÔNG TIN TÀI CHÍNH CỦA KHÁCH HÀNG</a></li>
+    <li><a href="#relative">THÔNG TIN TÀI CHÍNH CỦA VỢ/ CHỒNG KH</a></li>
+</ul>
+
+<form action="" method="post">
+    <div class="tab-content" style="">
+        <div class="tab-pane active" id="general">
+            <h3>THÔNG TIN CHUNG</h3>
+            <h5 style="color:#9d5530">Thông tin về khách hàng</h5>
+            <div>
+                <p style="display:inline-block">Địa chỉ sinh sống</p><span style="display:inline-block; width:180px"></span><input type="text" style="background:orange" name="name" value="44/1 Lương Định Của, phường An Phú, Quận 2, TpHCM" />
+            </div><div>
+                <p style="display:inline-block">Thời gian sinh sống tại địa chỉ trên</p><span style="display:inline-block; width:103px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" placeholder=">10 năm" value="" /><span style="display:inline-block; width:50px"></span><p style="display:inline-block">Số lần thay đổi chỗ ở</p><span style="display:inline-block; width:50px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Trình độ học vấn</p><span style="display:inline-block; width:181px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" placeholder="Đại Học" value="" />
+            </div><div>
+                <p style="display:inline-block">Phương tiện giao thông chính</p><span style="display:inline-block; width:122px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" placeholder="Xe máy" value="" />
+            </div><div>
+                <p style="display:inline-block">Hình thức sở hữu nhà ở</p><span style="display:inline-block; width:150px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Đã từng phát sinh dư nợ tại Techcombank?</p><span style="display:inline-block; width:65px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <h5 style="color:#9d5530">Thông tin về vợ/chồng của khách hàng</h5>
+            </div><div>
+                <p style="display:inline-block">Địa chỉ sinh sống</p><span style="display:inline-block; width:178px"></span><input type="text" style="background:orange" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Thời gian sinh sống tại địa chỉ trên</p><span style="display:inline-block; width:101px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" placeholder=">10 năm" value="" /><span style="display:inline-block; width:50px"></span><p style="display:inline-block">Số lần thay đổi chỗ ở</p><span style="display:inline-block; width:50px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Trình độ học vấn</p><span style="display:inline-block; width:179px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" placeholder="Đại Học" value="" />
+            </div><div>
+                <p style="display:inline-block">Phương tiện giao thông chính</p><span style="display:inline-block; width:120px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" placeholder="Xe máy" value="" />
+            </div><div>
+                <p style="display:inline-block">Hình thức sở hữu nhà ở</p><span style="display:inline-block; width:148px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Đã từng phát sinh dư nợ tại Techcombank?</p><span style="display:inline-block; width:62px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+        </div>
+        <div class="tab-pane" id="user">
+            <h3>THÔNG TIN TÀI CHÍNH CỦA KHÁCH HÀNG</h3>
+            <div>
+                <h5 style="color:#9d5530">Nguồn thu nhập </h5>
+            </div><div>
+                @Html.CheckBox("abc", true)Thu nhập từ lương và thưởng/phụ cấp
+            </div>
+            <div>
+                <p style="display:inline-block">Tên công ty hiện tại</p><span style="display:inline-block; width:180px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Địa chỉ công ty</p><span style="display:inline-block; width:200px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Số điện thoại công ty</p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                      <p style="display:inline-block">Thời gian đã làm việc</p><span style="display:inline-block; width:173px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="1 - 3 năm" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Vị trí công tác hiện tại</p><span style="display:inline-block; width:170px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="Nhân viên" name="name" value="" />
+            </div>
+            Thu nhập thường xuyên chứng minh được bằng giấy tờ
+            <div>
+                <span style="display:inline-block; width:180px"></span><p style="display:inline-block">(VND/ tháng)</p><span style="display:inline-block; width:27px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="15.000.000" />
+            </div>Thu nhập không thường xuyên chứng minh được bằng giấy tờ
+            <div>
+                <span style="display:inline-block; width:180px"></span><p style="display:inline-block">(VND/ tháng)</p><span style="display:inline-block; width:27px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>Thu nhập không chứng minh được bằng giấy tờ
+            <div>
+                <span style="display:inline-block; width:180px"></span><p style="display:inline-block">(VND/ tháng)</p><span style="display:inline-block; width:27px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>@Html.CheckBox("abc")Thu nhập từ cho thuê Bất động sản
+            <div>
+                <p style="display:inline-block">Số tiền (VND/ tháng)</p><span style="display:inline-block; width:172px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Số lượng phòng/ căn cho thuê</p><span style="display:inline-block; width:130px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức nhận</p><span style="display:inline-block; width:197px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Ngân hàng </p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Hình thức sở hữu</p><span style="display:inline-block; width:188px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="1 - 3 năm" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Vị trí BĐS cho thuê</p><span style="display:inline-block; width:181px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Đường trước mặt </p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Tần suất nhận tiền thuê</p><span style="display:inline-block; width:160px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="Nhân viên" name="name" value="" />
+            </div>
+            <div>Chung cư cho thuê </div>
+            <div>
+                <p style="display:inline-block">Dự án</p><span style="display:inline-block; width:236px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Địa chỉ </p><span style="display:inline-block; width:233px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Diện tích</p><span style="display:inline-block; width:223px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>Nhà đất cho thuê</div>
+            <div>
+                <p style="display:inline-block">Địa chỉ</p><span style="display:inline-block; width:233px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Diện tích</p><span style="display:inline-block; width:223px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Số tầng</p><span style="display:inline-block; width:229px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+
+            @Html.CheckBox("abc")Thu nhập từ cho thuê Ô tô
+            <div>
+                <p style="display:inline-block">Số tiền (VND/ tháng)</p><span style="display:inline-block; width:171px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Số lượng xe</p><span style="display:inline-block; width:210px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức nhận</p><span style="display:inline-block; width:195px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Ngân hàng </p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Tần suất nhận tiền thuê</p><span style="display:inline-block; width:158px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hãng xe – Dòng xe</p><span style="display:inline-block; width:178px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Năm sản xuất</p><span style="display:inline-block; width:201px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thời gian đã cho thuê</p><span style="display:inline-block; width:164px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Đối tượng thuê</p><span style="display:inline-block; width:192px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thời hạn HĐ thuê</p><span style="display:inline-block; width:182px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thời gian cho thuê</p><span style="display:inline-block; width:178px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức cho thuê</p><span style="display:inline-block; width:176px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+
+            @Html.CheckBox("abc")Lợi nhuận từ hộ kinh doanh cá thể
+            <div>
+                <p style="display:inline-block">Tên HKD</p><span style="display:inline-block; width:224px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Tên chủ sở hữu hộ kinh doanh</p><span style="display:inline-block; width:128px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức sở hữu địa điểm kinh doanh</p><span style="display:inline-block; width:92px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Nhóm ngành nghề</p><span style="display:inline-block; width:178px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thâm niên trong ngành </p><span style="display:inline-block; width:158px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức phân phối</p><span style="display:inline-block; width:171px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Cách quản lý, ghi chép sổ sách</p><span style="display:inline-block; width:126px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Đối tượng mua hàng</p><span style="display:inline-block; width:169px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Số lượng nhân viên cố định</p><span style="display:inline-block; width:141px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Uy tín với nhà cung cấp</p><span style="display:inline-block; width:158px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Doanh thu TB 3 tháng gần nhất</p><span style="display:inline-block; width:122px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+        </div>
+        <div class="tab-pane" id="relative">
+            <h3>THÔNG TIN TÀI CHÍNH CỦA KHÁCH HÀNG</h3>
+            <div>
+                <h5 style="color:#9d5530">Nguồn thu nhập </h5>
+            </div><div>
+                @Html.CheckBox("abc", true)Thu nhập từ lương và thưởng/phụ cấp
+            </div>
+            <div>
+                <p style="display:inline-block">Tên công ty hiện tại</p><span style="display:inline-block; width:180px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Địa chỉ công ty</p><span style="display:inline-block; width:200px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Số điện thoại công ty</p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Tên công ty hiện tại</p><span style="display:inline-block; width:180px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="1 - 3 năm" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Vị trí công tác hiện tại</p><span style="display:inline-block; width:170px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="Nhân viên" name="name" value="" />
+            </div>
+            Thu nhập thường xuyên chứng minh được bằng giấy tờ
+            <div>
+                <span style="display:inline-block; width:180px"></span><p style="display:inline-block">(VND/ tháng)</p><span style="display:inline-block; width:27px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>Thu nhập không thường xuyên chứng minh được bằng giấy tờ
+            <div>
+                <span style="display:inline-block; width:180px"></span><p style="display:inline-block">(VND/ tháng)</p><span style="display:inline-block; width:27px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>Thu nhập không chứng minh được bằng giấy tờ
+            <div>
+                <span style="display:inline-block; width:180px"></span><p style="display:inline-block">(VND/ tháng)</p><span style="display:inline-block; width:27px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>@Html.CheckBox("abc")Thu nhập từ cho thuê Bất động sản
+            <div>
+                <p style="display:inline-block">Số tiền (VND/ tháng)</p><span style="display:inline-block; width:172px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Số lượng phòng/ căn cho thuê</p><span style="display:inline-block; width:130px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức nhận</p><span style="display:inline-block; width:197px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Ngân hàng </p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Hình thức sở hữu</p><span style="display:inline-block; width:188px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="1 - 3 năm" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Vị trí BĐS cho thuê</p><span style="display:inline-block; width:181px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Đường trước mặt </p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Tần suất nhận tiền thuê</p><span style="display:inline-block; width:160px"></span><input type="text" style="display:inline-block;background:#faa94b" placeholder="Nhân viên" name="name" value="" />
+            </div>
+            <div>Chung cư cho thuê </div>
+            <div>
+                <p style="display:inline-block">Dự án</p><span style="display:inline-block; width:236px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Địa chỉ </p><span style="display:inline-block; width:233px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Diện tích</p><span style="display:inline-block; width:223px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>Nhà đất cho thuê</div>
+            <div>
+                <p style="display:inline-block">Địa chỉ</p><span style="display:inline-block; width:233px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Diện tích</p><span style="display:inline-block; width:223px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Số tầng</p><span style="display:inline-block; width:229px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+
+            @Html.CheckBox("abc")Thu nhập từ cho thuê Ô tô
+            <div>
+                <p style="display:inline-block">Số tiền (VND/ tháng)</p><span style="display:inline-block; width:171px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Số lượng xe</p><span style="display:inline-block; width:210px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức nhận</p><span style="display:inline-block; width:195px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" /><p style="display:inline-block">Ngân hàng </p><span style="display:inline-block; width:30px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Tần suất nhận tiền thuê</p><span style="display:inline-block; width:158px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hãng xe – Dòng xe</p><span style="display:inline-block; width:178px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Năm sản xuất</p><span style="display:inline-block; width:201px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thời gian đã cho thuê</p><span style="display:inline-block; width:164px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Đối tượng thuê</p><span style="display:inline-block; width:192px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thời hạn HĐ thuê</p><span style="display:inline-block; width:182px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thời gian cho thuê</p><span style="display:inline-block; width:178px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức cho thuê</p><span style="display:inline-block; width:176px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+
+            @Html.CheckBox("abc")Lợi nhuận từ hộ kinh doanh cá thể
+            <div>
+                <p style="display:inline-block">Tên HKD</p><span style="display:inline-block; width:224px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div><div>
+                <p style="display:inline-block">Tên chủ sở hữu hộ kinh doanh</p><span style="display:inline-block; width:128px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức sở hữu địa điểm kinh doanh</p><span style="display:inline-block; width:92px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Nhóm ngành nghề</p><span style="display:inline-block; width:178px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Thâm niên trong ngành </p><span style="display:inline-block; width:158px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Hình thức phân phối</p><span style="display:inline-block; width:171px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Cách quản lý, ghi chép sổ sách</p><span style="display:inline-block; width:126px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Đối tượng mua hàng</p><span style="display:inline-block; width:169px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Số lượng nhân viên cố định</p><span style="display:inline-block; width:141px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Uy tín với nhà cung cấp</p><span style="display:inline-block; width:158px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+            <div>
+                <p style="display:inline-block">Doanh thu TB 3 tháng gần nhất</p><span style="display:inline-block; width:122px"></span><input type="text" style="display:inline-block;background:#faa94b" name="name" value="" />
+            </div>
+    </div>
+    </div>
+</form>
+
+
+    <a id="kq" asp-action="_final_result">KẾT QUẢ</a>
+
+
+
+    <style>
+        /* Tabs*/
+        .tab-content .tab-panel {
+            padding: 100px 0;
+        }
+
+        .tab-content .tab-panel section .section-title {
+            text-align: center;
+            color: #007b5e;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .tab-content .tab-panel {
+            background: #007b5e;
+            color: #eee;
+        }
+
+            .tab-content .tab-panell {
+                color: #eee;
+            }
+
+        .tab-content .tab-panel .nav-tabs ul li .nav-link, .nav-tabs .nav-link.active {
+            color: #f3f3f3;
+            background-color: transparent;
+            border-color: transparent transparent #f3f3f3;
+            border-bottom: 4px solid !important;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .tab-content .tab-panel .nav-tabs .nav-link {
+            border: 1px solid transparent;
+            border-top-left-radius: .25rem;
+            border-top-right-radius: .25rem;
+            color: #eee;
+            font-size: 20px;
+        }
+        #kq {
+            background: red;
+            color: #fff;
+            border: none;
+            position: relative;
+            height: 60px;
+            font-size: 1.0em;
+            padding: 0 0;
+            cursor: pointer;
+            transition: 800ms ease all;
+            outline: none;
+            padding: 1em 1.5em;
+            position: relative;
+            text-decoration: none;
+        }
+
+            #kq:hover {
+                text-decoration: none;
+                background: #fff;
+                color: red;
+                cursor: pointer;
+            }
+
+            #kq:before, #kq:after {
+                text-decoration: none;
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 2px;
+                width: 0;
+                background: red;
+                transition: 400ms ease all;
+            }
+
+            #kq:after {
+                right: inherit;
+                top: inherit;
+                left: 0;
+                bottom: 0;
+            }
+
+            #kq:hover:before, #kq:hover:after {
+                width: 100%;
+                transition: 800ms ease all;
+            }
+    </style>
+    <script>
+        $('#myForm a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    </script>

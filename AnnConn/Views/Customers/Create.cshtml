@@ -1,0 +1,97 @@
+﻿@model AnnConn.Models.Customers
+
+@{
+    ViewData["Title"] = "Thông tin khách hàng";
+}
+
+<h2>Thông tin khách hàng</h2>
+
+@*<h4>Tạo mới</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label id="req" class="control-label">Tên khách hàng</label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="req" class="control-label">Số điện thoại</label>
+                <input asp-for="phone" class="form-control" />
+                <span asp-validation-for="phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label id="opt">Bạn đã tiếp xúc trực tiếp và tư vấn Khách hàng về Vincity bao nhiêu lần?</label>
+                <button id="4a" class="radio" checked>a. Chưa lần nào, KH chỉ tìm hiểu, chưa có thái độ rõ ràng</button>
+                <button id="4b" class="radio">b. Trên 1 lần – KH quan tâm,cần thêm thông tin từ sales</button>
+                <button id="4c" class="radio">c. Trên 1 lần – Kh có mục đích mua và gần chốt </button>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Ghi chú việc tiếp cận khách hàng cho sale</label>
+                <input asp-for="note" class="form-control" />
+                <span asp-validation-for="note" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="condition" class="control-label"></label>
+                <input asp-for="condition" class="form-control" />
+                <span asp-validation-for="condition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cNumber" class="control-label"></label>
+                <input asp-for="cNumber" class="form-control" />
+                <span asp-validation-for="cNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pNumber" class="control-label"></label>
+                <input asp-for="pNumber" class="form-control" />
+                <span asp-validation-for="pNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ch" class="control-label"></label>
+                <input asp-for="ch" class="form-control" />
+                <span asp-validation-for="ch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="policy" class="control-label"></label>
+                <input asp-for="policy" class="form-control" />
+                <span asp-validation-for="policy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="charges" class="control-label"></label>
+                <input asp-for="charges" class="form-control" />
+                <span asp-validation-for="charges" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totals" class="control-label"></label>
+                <input asp-for="totals" class="form-control" />
+                <span asp-validation-for="totals" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<style>
+    #req{
+        color:#f12121;
+    }
+</style>
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
